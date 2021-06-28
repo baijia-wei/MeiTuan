@@ -1,10 +1,30 @@
-import React from 'react';
-import { Text } from 'react-native';
+import * as React from 'react';
+import { View,Text } from 'react-native';
 
-const order = () => {
-  return (
-    <Text>我是订单页面</Text>
-  );
+interface Props{
+    menUInfos:Array<object>,
+    onMenuSelected:Function
+
+}
+interface State{
+
+
 }
 
-export default order;
+const HomeView:React.FunctionComponent<Props>= (path:Props) => {
+  let {menUInfos,onMenuSelected}=path
+
+  let MenuElements=menUInfos.map((info,index)=>{
+    <Text>
+
+    </Text>
+  })
+
+  return (
+    <View>
+        
+  </View>
+  );
+} 
+
+export default HomeView;
