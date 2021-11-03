@@ -1,5 +1,6 @@
 let common_url = 'http://157.122.54.189:9060';  //服务器地址
 let token = '';   
+export const  baseURL='http://157.122.54.189:9060';
 /**
  * @param {string} url 接口地址
  * @param {string} method 请求方法：GET、POST，只能大写

@@ -8,7 +8,7 @@ import Nearby from "./scene/Mine/mine"
 import order from "./scene/Order/order"
 import web from "./web/webScene"
 import TabBaritem from "./scene/widgetComponent/TabBarItem";
-import color from "./scene/widgetComponent/color";
+import color from "./assets/Color/color";
 import { StyleSheet, Text, TouchableOpacity ,Image,Dimensions} from "react-native";
 
 const App:React.FunctionComponent = () => {
@@ -20,16 +20,16 @@ const App:React.FunctionComponent = () => {
           tabBarIcon: ({ focused,color}) => {
             // console.log(focused);当前选项卡是否选中
             if (route.name === '首页') {
-             return <TabBaritem tintColor={color} focused={focused} normalImage={require('./img/nohome.png')} selectedImage={require('./img/home.png')}/>
+             return <TabBaritem tintColor={color} focused={focused} normalImage={require('./assets/HomeImg/nohome.png')} selectedImage={require('./assets/HomeImg/home.png')}/>
             } 
             if (route.name === '推荐') {
-              return   <TabBaritem tintColor={color} focused={focused} normalImage={require('./img/nonearby.png')} selectedImage={require('./img/nearby.png')}/>
+              return   <TabBaritem tintColor={color} focused={focused} normalImage={require('./assets/HomeImg/nonearby.png')} selectedImage={require('./assets/HomeImg/nearby.png')}/>
             }
             if (route.name === '订单') {
-              return  <TabBaritem tintColor={color} focused={focused} normalImage={require('./img/noorder.png')} selectedImage={require('./img/order.png')}/>
+              return  <TabBaritem tintColor={color} focused={focused} normalImage={require('./assets/HomeImg/noorder.png')} selectedImage={require('./assets/HomeImg/order.png')}/>
             }
             if (route.name === '我的') {
-              return <TabBaritem tintColor={color} focused={focused} normalImage={require('./img/nomine.png')} selectedImage={require('./img/mine.png')}/>
+              return <TabBaritem tintColor={color} focused={focused} normalImage={require('./assets/HomeImg/nomine.png')} selectedImage={require('./assets/HomeImg/mine.png')}/>
             }
           },
         })}
@@ -78,7 +78,7 @@ const TabScreen=()=>{
 
 const NavigationOptions=()=>{
     return  <TouchableOpacity style={styles.searchBar}>
-                <Image source={require("./img/fangdajing.png")} style={styles.searchIcon}/>
+                <Image source={require("./assets/HomeImg/fangdajing.png")} style={styles.searchIcon}/>
                 <Text style={{fontSize:15
                   ,color:color.heise}}>搜索</Text>
             </TouchableOpacity>
@@ -97,7 +97,7 @@ const headerLeft=()=>{
 const headerRight=()=>{
   return  <TouchableOpacity style={styles.cibtauber}>
               {/* <Text style={{fontSize:15 ,margin:8,color:"white"} }>图标</Text> */}
-              <Image source={require("./img/xiaoxi.png")} style={styles.searchIcon}/>
+              <Image source={require("./assets/HomeImg/xiaoxi.png")} style={styles.searchIcon}/>
           </TouchableOpacity> 
 }
 
